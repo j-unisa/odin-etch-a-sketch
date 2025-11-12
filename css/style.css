@@ -16,5 +16,12 @@ html, body
     min-height: 100vh;
     display: flex;
     flex-flow: row wrap;
+}
+
+.grid-square
+{
+    flex: 1 1 200px;
+    
+    /* Remove after project is complete */
     border: 2px solid black;
 }
