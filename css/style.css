@@ -1,0 +1,20 @@
+*,
+*::before,
+*::after 
+{
+  box-sizing: border-box;
+}
+html, body
+{
+    margin: 0;
+    padding: 0;
+}
+
+#grid-container
+{
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-flow: row wrap;
+    border: 2px solid black;
+}
