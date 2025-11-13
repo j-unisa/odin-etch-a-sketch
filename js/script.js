@@ -1,18 +1,35 @@
-const gridContainer = document.querySelector("#grid-container");
-
-let numberOfSquares = 16;
-for (let i = 0; i < numberOfSquares; i++)
+const button = document.querySelector("button");
+button.addEventListener("click", () => 
 {
-    let gridSquare = document.createElement("div");
-    gridSquare.classList.toggle("grid-square");
-    gridContainer.appendChild(gridSquare);
+    size = +prompt("Enter grid size (50 = 50×50)")
+    createGrid(size * size);
+});
+
+function createGrid(gridSize)
+{
+    const gridContainer = document.querySelector("#grid-container");
+
+    for (let i = 0; i < gridSize; i++)
+    {
+        let gridSquare = document.createElement("div");
+        gridSquare.classList.toggle("grid-square");
+        gridContainer.appendChild(gridSquare);
+    }
+
+    colorInSquares();
 }
 
-let gridSquares = document.querySelectorAll(".grid-square");
-gridSquares.forEach((square) => 
+function colorInSquares()
 {
-    square.addEventListener("mouseenter", (e) => 
+    let gridSquares = document.querySelectorAll(".grid-square");
+    gridSquares.forEach((square) => 
     {
-        square.style.backgroundColor = "green";
+        square.addEventListener("mouseenter", (e) => 
+        {
+            square.style.backgroundColor = "green";
+        });
     });
-});
+}
+
+let size = 16;
+createGrid(size);
