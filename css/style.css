@@ -17,6 +17,7 @@ html, body
     display: flex;
     flex-flow: column;
     align-items: center;
+    gap: 0;
 }
 
 #grid-container
@@ -29,7 +30,8 @@ html, body
 
 .grid-square
 {
-    flex: 1 1 200px;
+    margin: 0;
+    flex: 0 0 auto;
 
     /* Remove after project is complete */
     border: 2px solid black;
