@@ -10,18 +10,32 @@ html, body
     padding: 0;
 }
 
-#grid-container
+#main-container
 {
     width: 100vw;
     min-height: 100vh;
     display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+#grid-container
+{
+    width: 100%;
+    display: flex;
     flex-flow: row wrap;
+    flex: 1;
 }
 
 .grid-square
 {
     flex: 1 1 200px;
-    
+
     /* Remove after project is complete */
     border: 2px solid black;
+}
+
+button
+{
+    flex: 0 0 auto;
 }
