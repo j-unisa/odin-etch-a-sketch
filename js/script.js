@@ -8,9 +8,8 @@ button.addEventListener("click", () =>
 function createGrid(gridSize)
 {
     const gridContainer = document.querySelector("#grid-container");
-    const gridHeight = gridContainer.clientHeight;
-    const gridWidth = gridContainer.clientWidth;
-    const squareSize = Math.floor(Math.min(gridHeight, gridWidth) / gridSize);
+    const containerSize = gridContainer.clientWidth;
+    const squareSize = containerSize / gridSize;
 
     gridContainer.innerHTML = "";
 
