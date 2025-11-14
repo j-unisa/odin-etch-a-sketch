@@ -2,6 +2,10 @@ const button = document.querySelector("button");
 button.addEventListener("click", () => 
 {
     size = +prompt("Enter grid size (50 = 50×50)")
+    while (size > 100)
+        {
+            size = +prompt("100 is the max")
+        } 
     createGrid(size);
 });
 
