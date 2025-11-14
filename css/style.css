@@ -25,14 +25,12 @@ html, body
     height: 90vmin;
     display: flex;
     flex-flow: row wrap;
+    border: 1px solid black;
 }
 
 .grid-square
 {
     margin: 0;
-
-    /* Remove after project is complete */
-    border: 1px solid black;
 }
 
 button
