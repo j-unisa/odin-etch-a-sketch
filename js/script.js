@@ -12,6 +12,8 @@ function createGrid(gridSize)
     const gridWidth = gridContainer.clientWidth;
     const squareSize = Math.floor(Math.min(gridHeight, gridWidth) / gridSize);
 
+    gridContainer.innerHTML = "";
+
     for (let i = 0; i < gridSize * gridSize; i++)
     {
         let gridSquare = document.createElement("div");
