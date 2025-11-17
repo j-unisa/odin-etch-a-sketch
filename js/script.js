@@ -34,11 +34,19 @@ function colorInSquares()
     let gridSquares = document.querySelectorAll(".grid-square");
     gridSquares.forEach((square) => 
     {
-        square.addEventListener("mouseenter", (e) => 
+        square.addEventListener("mouseenter", () => 
         {
-            square.style.backgroundColor = "green";
+            square.style.backgroundColor = randomRGB();
         });
     });
+}
+
+function randomRGB()
+{
+    let r = Math.floor(Math.random() * 256);
+    let g = Math.floor(Math.random() * 256);
+    let b = Math.floor(Math.random() * 256);
+    return `rgb(${r}, ${g}, ${b})`;
 }
 
 let size = 16;
