@@ -36,7 +36,12 @@ function colorInSquares()
     {
         square.addEventListener("mouseenter", () => 
         {
-            square.style.backgroundColor = randomRGB();
+            if (!square.style.backgroundColor)
+            {
+                square.style.backgroundColor = randomRGB();
+            }
+            
+            square.style.opacity = Number(square.style.opacity || 0) + 0.1;
         });
     });
 }
