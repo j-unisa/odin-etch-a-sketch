@@ -1,4 +1,10 @@
+// === DOM Elements ===
+const gridContainer = document.querySelector("#grid-container");
 const button = document.querySelector("button");
+
+// === Event Listeners ===
+gridContainer.addEventListener("mouseover", (e) => colorInSquares(e));
+
 button.addEventListener("click", () => 
 {
     size = +prompt("Enter grid size (50 = 50×50)")
@@ -9,9 +15,9 @@ button.addEventListener("click", () =>
     createGrid(size);
 });
 
+// === Grid Creation Function ===
 function createGrid(gridSize)
 {
-    const gridContainer = document.querySelector("#grid-container");
     const containerSize = gridContainer.clientWidth;
     const squareSize = containerSize / gridSize;
 
@@ -25,27 +31,23 @@ function createGrid(gridSize)
         gridSquare.style.width = `${squareSize}px`;
         gridContainer.appendChild(gridSquare);
     }
-
-    colorInSquares();
 }
 
-function colorInSquares()
+// === Coloring Logic ===
+function colorInSquares(event)
 {
-    let gridSquares = document.querySelectorAll(".grid-square");
-    gridSquares.forEach((square) => 
+    if (event.target.classList.contains("grid-square"))
     {
-        square.addEventListener("mouseenter", () => 
+        if (!event.target.style.backgroundColor)
         {
-            if (!square.style.backgroundColor)
-            {
-                square.style.backgroundColor = randomRGB();
-            }
-            
-            square.style.opacity = Number(square.style.opacity || 0) + 0.1;
-        });
-    });
+            event.target.style.backgroundColor = randomRGB();
+        }
+        
+        event.target.style.opacity = Number(event.target.style.opacity || 0) + 0.1;
+    }
 }
 
+// === Utility Functions ===
 function randomRGB()
 {
     let r = Math.floor(Math.random() * 256);
@@ -54,5 +56,6 @@ function randomRGB()
     return `rgb(${r}, ${g}, ${b})`;
 }
 
+// === Initialize Grid ===
 let size = 16;
 createGrid(size);
