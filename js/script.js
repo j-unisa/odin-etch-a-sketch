@@ -19,7 +19,7 @@ button.addEventListener("click", () =>
 function createGrid(gridSize)
 {
     const containerSize = 950;
-    const squareSize = containerSize / gridSize;
+    const squareSize = Math.floor(containerSize / gridSize);
 
     gridContainer.innerHTML = "";
 
