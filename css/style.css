@@ -29,6 +29,7 @@ html, body
     display: flex;
     flex-flow: row wrap;
     border: 1px solid black;
+    box-sizing: content-box;
 }
 
 /* === Grid squares === */
