@@ -1,4 +1,4 @@
-/* Reset and box-sizing */
+/* === Reset and box-sizing === */
 *,
 *::before,
 *::after 
@@ -12,7 +12,7 @@ html, body
     padding: 0;
 }
 
-/* Layout containers */
+/* === Layout containers === */
 #main-container
 {
     width: 100vw;
@@ -31,13 +31,13 @@ html, body
     border: 1px solid black;
 }
 
-/* Grid squares */
+/* === Grid squares === */
 .grid-square
 {
     margin: 0;
 }
 
-/* Control */
+/* === Controls === */
 button
 {
     flex: 0 0 auto;
