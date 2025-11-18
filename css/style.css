@@ -24,8 +24,8 @@ html, body
 
 #grid-container
 {
-    width: 90vmin;
-    height: 90vmin;
+    width: 950px;
+    height: 950px;
     display: flex;
     flex-flow: row wrap;
     border: 1px solid black;
